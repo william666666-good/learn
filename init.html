@@ -6,13 +6,17 @@
     <script>
       function myFunction(){
         
-        let student=[{
+      let student=[{
         name:'张三',
         score:83,
         sex:'boy',
         father:{
           name:'张一',
           age:35,
+        },
+        mother:{
+          name:'额我',
+          age:447,
         }
       },{
         name:'李四',
@@ -21,6 +25,11 @@
         father:{
           name:'李一',
           age:38,
+        },
+        mother:{
+          name:'一样',
+          age:4377777,
+        
         }
       },{
         name:'王五',
@@ -29,18 +38,24 @@
         father:{
           name:'王一',
           age:41,
+        },
+        mother:{
+          name:'解决',
+          age:9998986674,
         }
       }]
         
-      let max=student[0]
-      for(let i=0;i<student.length;i++){
-        if(student[i].father.age>max.father.age ){
-          max=student[i]
-        }
+     let max=student[0]
+     for(let i=0;i<student.length;i++){
+      if(student[i].score+student[i].father.age+student[i].mother.age>max.age+max.father.age+max.mother.age){
+        max=student[i]
       }
+     }
+     
+      
         
       
-      console.log(max.father.name,max.name)
+      console.log(max.father.name,max.name,max.mother.name)
       
     }  
         
