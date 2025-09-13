@@ -5,40 +5,44 @@
     <title>init</title>
     <script>
       function myFunction(){
+        
         let student=[{
-            name:'阿姨',
-            score:-1,
-            sex:'boy',
-            age:15
-        },{
-          name:'人机',
-          score:0,
-          sex:'girl',
-            age:12
-        },{
-          name:'xx',
-          score:78,
-          sex:'boy',
-            age:1234567898765432345677654323456556455475454764564589
-        },{
-          name:'yy',
-          score:99,
-          sex:'boy',
-            age:12345678987654323456776543234565564554754547645647467823497        },{
-          name:"www",
-          score:100
-        }]
-        let max=student[0]
-        for(let i=0;i<student.length;i++){
-          if(student[i].score>max.score && student[i].sex==='boy'&& student[i].age<20){
-            max=student[i]
-          }
+        name:'张三',
+        score:83,
+        sex:'boy',
+        father:{
+          name:'张一',
+          age:35,
         }
-          
+      },{
+        name:'李四',
+        score:54,
+        sex:'girl',
+        father:{
+          name:'李一',
+          age:38,
+        }
+      },{
+        name:'王五',
+        score:99,
+        sex:'girl',
+        father:{
+          name:'王一',
+          age:41,
+        }
+      }]
         
-        console.log(max)
+      let max=student[0]
+      for(let i=0;i<student.length;i++){
+        if(student[i].father.age>max.father.age ){
+          max=student[i]
+        }
+      }
         
-      }  
+      
+      console.log(max.father.name,max.name)
+      
+    }  
         
     </script>
 		<style>
